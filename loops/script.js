@@ -137,16 +137,30 @@ console.log('Lets learn about loops! Uncomment the code on line 3 and at the bot
 
     //The While loop
 
-    for(let rep = 1;rep <= 10; rep ++) {
-        console.log(`Lifting weights repetition ${rep}`)
-    };
-
     let rep = 1
-    while(rep <= 10) {
+    while(rep <= 10) { //condition
         console.log(`Lifting weights repetition ${rep}`);
-        rep ++;
-
+        rep ++; //for this example it has a condition
     }
+
+    //A while loop is usually used for situations where you dont need a number to go up or down.
+    //It only needs a condition and will execute this condition until it becomes false.
+    
+    let dice = Math.trunc(Math.random() * 6) + 1;
+    
+    while (dice !==6) {
+        console.log(`You rolled a ${dice}`);
+        dice = Math.trunc(Math.random() * 6) + 1; //We reassigned the dice variable so the loop doesnt run infinitely
+        if (dice ===6) {
+            console.log(`Loop is about to end...`);
+        }
+    }
+
+    //A while loop is best used when you don't need a counter variable.
+    //Or when you do not know how many iterations you'll need beforehand.
+
+    //A for loop is usually suited to use with arrays since it requires a counter variable.
+    //You'll use it in cases where you know how many iterations you'll need.
 
 
 
